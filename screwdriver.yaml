@@ -4,7 +4,7 @@ jobs:
     main:
         requires: [~pr, ~commit]
         steps:
-              - echo: echo hello
+              - echo: echo hi
 #             - validate: sd-cmd validate -f sd-command.yaml
 #     publish:
 #         requires: [main]

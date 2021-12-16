@@ -2,7 +2,7 @@ shared:
     image: node:12
 jobs:
     main:
-        requires: [~pr, ~commit]
+        requires: [~pr, ~commit, ~sd@10062:main]
         steps:
               - echo: echo hi
 #             - validate: sd-cmd validate -f sd-command.yaml

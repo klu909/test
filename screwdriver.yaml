@@ -1,9 +1,19 @@
 shared:
     image: node:12
+    settings:
+        email:
+          addresses: [foobarnotvalid@gmail.com]
+          statuses: [SUCCESS, FAILURE]
+        slack:
+          channels:
+           - 'test-notifications'
+          statuses:
+           - SUCCESS
+           - FAILURE
 jobs:
     main:
         annotations:
-            screwdriver.cd/buildPeriodically: H(1-2) * * * *
+            screwdriver.cd/buildPeriodically: H(10-12) * * * *
         requires: [~pr, ~commit]
         steps:
               - echo: echo hi

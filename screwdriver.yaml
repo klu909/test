@@ -2,6 +2,8 @@ shared:
     image: node:12
 jobs:
     main:
+        annotations:
+          screwdriver.cd/buildPeriodically: 30 * * * *
         requires: [~pr, ~commit]
         steps:
               - echo: echo hi

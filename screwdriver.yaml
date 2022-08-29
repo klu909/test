@@ -3,7 +3,7 @@ shared:
   settings:
     slack:
       channels:
-        - test-sd-notifications
+        - test-bot-notification
       statuses:
         - SUCCESS
         - FAILURE

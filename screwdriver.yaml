@@ -10,6 +10,7 @@ shared:
           statuses:
            - SUCCESS
            - FAILURE
+          minimized: false
 jobs:
     main:
 #         annotations:

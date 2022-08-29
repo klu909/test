@@ -6,7 +6,7 @@ shared:
 #           statuses: [SUCCESS, FAILURE]
         slack:
           channels:
-           - 'test-notification'
+           - 'test-sd-notifications'
           statuses:
            - SUCCESS
            - FAILURE

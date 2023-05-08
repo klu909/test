@@ -2,9 +2,8 @@ shared:
   image: node:14
 jobs:
   main:
-    annotations:
-      screwdriver.cd/blockedBySameJob: false
-      screwdriver.cd/blockedBySameJobWaitTime: 0
+  annotations:
+    screwdriver.cd/buildPeriodically: H(27-28) * * * *
     requires: [ ~pr, ~commit ]
     steps:
       - sleep 60

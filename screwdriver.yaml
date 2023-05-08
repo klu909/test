@@ -1,9 +1,9 @@
 shared:
-  image: node:14
+  image: node:18
 jobs:
   main:
-  annotations:
-    screwdriver.cd/buildPeriodically: H(27-28) * * * *
-    requires: [ ~pr, ~commit ]
-    steps:
-      - sleep 60
+      annotations:
+        screwdriver.cd/buildPeriodically: H * * * *
+      requires: [ ~pr, ~commit ]
+      steps:
+        - sleep 60

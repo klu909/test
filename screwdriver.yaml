@@ -1,17 +1,10 @@
 shared:
   image: node:14
-  settings:
-    slack:
-      channels:
-        - test-bot-notification
-      statuses:
-        - SUCCESS
-        - FAILURE
-        - QUEUED
-        - RUNNING
-      minimized: false
 jobs:
   main:
+    annotation:
+      screwdriver.cd/blockedBySameJob: false
+      screwdriver.cd/blockedBySameJobWaitTime: 0
     requires: [ ~pr, ~commit ]
     steps:
-      - echo hi
+      - sleep 60

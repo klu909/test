@@ -1,7 +1,8 @@
 shared:
-  image: invalid
+  image: node:18
 jobs:
   main:
       requires: [ ~pr, ~commit ]
       steps:
-        - warn: meta set meta.warning "this is a warning"
+        - warn: meta set meta.warning.warn "this is a warning"
+        - alert: meta set meta.warning.alert "this is an alert"

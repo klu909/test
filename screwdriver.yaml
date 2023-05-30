@@ -4,5 +4,4 @@ jobs:
   main:
       requires: [ ~pr, ~commit ]
       steps:
-        - coverage: meta set meta.summary.coverage "Coverage increased by 15%"
-        - markdown: meta set meta.summary.markdown "this markdown comment is **bold** and *italic*"
+        - warn: meta set meta.warning "this is a warning"

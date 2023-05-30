@@ -5,4 +5,5 @@ jobs:
       requires: [ ~pr, ~commit ]
       steps:
         - warn: meta set meta.warning.warn "this is a warning"
+        - sleep: sleep 600
         - alert: meta set meta.warning.alert "this is an alert"

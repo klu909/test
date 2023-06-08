@@ -9,5 +9,5 @@ jobs:
   main2:
       requires: [ ~pr ]
       steps:
-        - coverage: meta set meta.summary.coverage "Coverage increased by 15%"
+        - coverage: meta set meta.summary.coverage "Coverage increased by 155%"
         - markdown: meta set meta.summary.markdown "this markdown comment is **bold** and *italic*"

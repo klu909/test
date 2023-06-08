@@ -2,11 +2,12 @@ shared:
   image: node:18
 jobs:
   main:
-      requires: [ ~pr, ~commit ]
+      requires: [ ~commit ]
       steps:
         - warn: meta set meta.warning.warn "this is a warning"
         - alert: meta set meta.warning.alert "this is an alert"
   main2:
+      requires: [ ~pr ]
       steps:
         - coverage: meta set meta.summary.coverage "Coverage increased by 15%"
         - markdown: meta set meta.summary.markdown "this markdown comment is **bold** and *italic*"

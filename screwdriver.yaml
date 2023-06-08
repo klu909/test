@@ -11,3 +11,4 @@ jobs:
       steps:
         - coverage: meta set meta.summary.coverage "Coverage increased by 155%"
         - markdown: meta set meta.summary.markdown "this markdown comment is **bold** and *italic*"
+        - split: meta set meta.splitComments "split it"

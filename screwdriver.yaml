@@ -4,8 +4,8 @@ jobs:
   main:
       requires: [ ~pr, ~commit ]
       steps:
-        - warn: meta set build.warning.warn "this is a warning"
-        - alert: meta set build.warning.alert "this is an alert"
+        - warn: meta set meta.warning.warn "this is a warning"
+        - alert: meta set meta.warning.alert "this is an alert"
   main2:
       steps:
         - coverage: meta set meta.summary.coverage "Coverage increased by 15%"

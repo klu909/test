@@ -2,6 +2,8 @@ shared:
   image: node:18
 jobs:
   main:
+      annotations:
+        screwdriver.cd/blockedBySameJob: false
       requires: [ ~commit ]
       steps:
         - warn: meta set meta.warning.warn "this is a warning"

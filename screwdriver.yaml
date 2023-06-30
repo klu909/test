@@ -4,9 +4,8 @@ jobs:
   main:
       requires: [ ~commit ]
       steps:
-        - warn: echo hello
-        # - warn: meta set build.warn "this is a warning"
-        # - alert: meta set build.alert "this is an alert"
+        - warn: meta set build.warn "this is a warning"
+        - alert: meta set build.alert "this is an alert"
   follow:
       requires: [ ~main ]
       steps:

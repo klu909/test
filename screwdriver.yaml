@@ -33,7 +33,7 @@ jobs:
   fan-in-60:
       requires: [ ~fan-5-60, ~fan-5-30-60, ~fan-5-10-15-30-60 ]
       steps:
-        - sleep: sleep 60
+        - sleep: sleep 120
   fan-2-5:
       requires: [ fan-in-5 ]
       steps:

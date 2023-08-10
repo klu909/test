@@ -34,8 +34,28 @@ jobs:
       requires: [ ~fan-5-60, ~fan-5-30-60, ~fan-5-10-15-30-60 ]
       steps:
         - sleep: sleep 60
+  fan-2-5:
+      requires: [ fan-in-5 ]
+      steps:
+        - sleep: sleep 5
+  fan-2-10:
+      requires: [ fan-in-10 ]
+      steps:
+        - sleep: sleep 10
+  fan-2-15:
+      requires: [ fan-in-15 ]
+      steps:
+        - sleep: sleep 15
+  fan-2-30:
+      requires: [ fan-in-30 ]
+      steps:
+        - sleep: sleep 30
+  fan-2-60:
+      requires: [ fan-in-60 ]
+      steps:
+        - sleep: sleep 120
   join:
-      requires: [~fan-in-5, ~fan-in-10, ~fan-in-15, ~fan-in-30, ~fan-in-60]
-      blockedBy: [~fan-in-5, ~fan-in-10, ~fan-in-15, ~fan-in-30, ~fan-in-60]
+      requires: [~fan-2-5, ~fan-2-10, ~fan-2-15, ~fan-2-30, ~fan-2-60]
+      blockedBy: [~fan-2-5, ~fan-2-10, ~fan-2-15, ~fan-2-30, ~fan-2-60]
       steps:
           - hello: echo hello

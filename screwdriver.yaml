@@ -19,7 +19,7 @@ jobs:
       steps:
         - sleep: sleep 5
   fan-in-10:
-      requires: [ ~fan-in-5, ~fan-5-10-15-30-60 ]
+      requires: [ ~fan-5-10-15-30-60 ]
       steps:
         - sleep: sleep 10
   fan-in-15:

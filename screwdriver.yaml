@@ -4,7 +4,8 @@ jobs:
   main:
       requires: [ ~commit ]
       steps:
-        - sleep: meta set build.warning "this is warning"
+        - sleep: meta set build.warning.message "this is warning"
+        - a: meta set build.warning.warn "warn"
   green:
       requires: [main]
       steps:

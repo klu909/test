@@ -4,7 +4,8 @@ jobs:
   main:
       requires: [ ~commit ]
       steps:
-        - sleep: echo hello
+        - sleep: meta set build.warning true
+        - fail: return 1
   green:
       requires: [main]
       steps:

@@ -4,6 +4,5 @@ jobs:
   main:
       requires: [ ~commit ]
       steps:
-        - sleep: |
-          meta set build.warning.message "this is a warning message"
-          meta set build.warning.anotherMessage "this is a warning message"
+        - setWarning: meta set build.warning.message "this is a warning message"
+        - setAnotherWarning: meta set build.warning.message "this is a warning message"

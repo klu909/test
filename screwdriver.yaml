@@ -5,4 +5,4 @@ jobs:
       requires: [ ~commit ]
       steps:
         - setWarning: meta set build.warning.message "this is a warning message"
-        - setAnotherWarning: meta set build.warning.message "this is a warning message"
+        - setAnotherWarning: meta set build.warning.anotherMessage "this is another warning message"

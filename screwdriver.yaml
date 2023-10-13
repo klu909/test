@@ -5,8 +5,3 @@ jobs:
       requires: [ ~commit ]
       steps:
         - sleep: meta set build.warning.message "this is a warning message"
-        - fail: return 1
-  green:
-      requires: [main]
-      steps:
-        - hello: echo hello

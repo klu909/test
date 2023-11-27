@@ -6,3 +6,42 @@ jobs:
       steps:
         - setWarning: meta set build.warning.message "this is a warning message"
         - setAnotherWarning: meta set build.warning.anotherMessage "this is another warning message"
+  main1:
+      requires: [~pr]
+      steps:
+          - check-pr: |
+              if [[ -n "$SD_PULL_REQUEST" ]]; then
+                # the PR job name is in this format: PR-123:job_name. We need the job name without the "-ID" part
+                PR_JOB_NAME=$(echo $SD_JOB_NAME | sed 's/-[0-9]\+//')
+                echo "PR_JOB_NAME: ${PR_JOB_NAME}"
+                meta set build.warning true
+                meta set build.warning.Warning "E2E tests have been skipped and will run once the PR is approved."
+                meta set meta.status.${PR_JOB_NAME} '{"status":"SUCCESS","message":"E2E tests skipped. Only runs on approved PRs."}'
+                echo "We are in a PR build and RUN_E2E meta is not true. Skipping e2e checks."
+              fi
+  main2:
+      requires: [~pr]
+      steps:
+          - check-pr: |
+              if [[ -n "$SD_PULL_REQUEST" ]]; then
+                # the PR job name is in this format: PR-123:job_name. We need the job name without the "-ID" part
+                PR_JOB_NAME=$(echo $SD_JOB_NAME | sed 's/-[0-9]\+//')
+                echo "PR_JOB_NAME: ${PR_JOB_NAME}"
+                meta set build.warning true
+                meta set build.warning.Warning "E2E tests have been skipped and will run once the PR is approved."
+                meta set meta.status.${PR_JOB_NAME} '{"status":"SUCCESS","message":"E2E tests skipped. Only runs on approved PRs."}'
+                echo "We are in a PR build and RUN_E2E meta is not true. Skipping e2e checks."
+              fi
+  main3:
+      requires: [~pr]
+      steps:
+          - check-pr: |
+              if [[ -n "$SD_PULL_REQUEST" ]]; then
+                # the PR job name is in this format: PR-123:job_name. We need the job name without the "-ID" part
+                PR_JOB_NAME=$(echo $SD_JOB_NAME | sed 's/-[0-9]\+//')
+                echo "PR_JOB_NAME: ${PR_JOB_NAME}"
+                meta set build.warning true
+                meta set build.warning.Warning "E2E tests have been skipped and will run once the PR is approved."
+                meta set meta.status.${PR_JOB_NAME} '{"status":"SUCCESS","message":"E2E tests skipped. Only runs on approved PRs."}'
+                echo "We are in a PR build and RUN_E2E meta is not true. Skipping e2e checks."
+              fi

@@ -4,5 +4,5 @@ jobs:
   main:
       requires: [ ~commit ]
       steps:
-        - setWarning: meta set build.warning.message "<img src=\"#notanimage\" onerror=\"alert('unsafe script injection from warning!')\" />"
-        - setAnotherWarning: meta set build.warning.anotherMessage "this is another warning message"
+        - inject: |
+          meta set build.warning.message "<img src=\"#notanimage\" onerror=\"alert('unsafe script injection from warning!')\" />"

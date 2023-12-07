@@ -5,4 +5,4 @@ jobs:
       requires: [ ~commit ]
       steps:
         - inject: |
-          meta set build.warning.message "<img src=\"#notanimage\" onerror=\"alert('unsafe script injection from warning!')\" />"
+           meta set build.warning.message "<img src=\"#notanimage\" onerror=\"alert('unsafe script injection from warning!')\" />"

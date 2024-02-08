@@ -1,8 +1,9 @@
 shared:
   image: node:18
+  environment:
+      FOO: bar
 jobs:
   main:
       requires: [ ~commit ]
       steps:
-        - inject: |
-           meta set build.warning.message "<img src=\"#notanimage\" onerror=\"alert('unsafe script injection from warning!')\" />"
+        - test: echo $FOO
